@@ -9,10 +9,10 @@ import UIKit
 import SnapKit
 
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    let jackFlixButton = UIButton()
-    let NPButton = UIButton()
+    private let jackFlixButton = UIButton()
+    private let NPButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         NPButtonUI()
     }
     
-    func jackFlixButtonUI() {
+    private func jackFlixButtonUI() {
         view.addSubview(jackFlixButton)
         jackFlixButton.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(20)
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         jackFlixButton.configuration = .myButtonStyle(title: "JACKFLIX")
     }
     
-    func NPButtonUI() {
+    private func NPButtonUI() {
         view.addSubview(NPButton)
         NPButton.snp.makeConstraints { make in
             make.horizontalEdges.equalTo(jackFlixButton.snp.horizontalEdges)
